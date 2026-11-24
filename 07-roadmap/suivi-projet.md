@@ -23,7 +23,7 @@ Mis à jour le 24/11/2026.
 | --- | --- |
 | 0. Audit de l'existant | Fait (page publique uniquement ; code source non consulté) |
 | 1. Stratégie, offres, architecture éditoriale | Fait (v1) : positionnement, secteurs, catalogue interne, abonnements, architecture éditoriale |
-| 2. Identité visuelle et design system | À faire |
+| 2. Identité visuelle et design system | Planche v1 en attente de validation (01-branding/direction-atelier.md) |
 | 3. Site | À faire |
 | 4. Tests, SEO, accessibilité | À faire |
 | 5. Plaquettes | À faire |
