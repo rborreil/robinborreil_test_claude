@@ -107,48 +107,75 @@ body{margin:0;background:#F5F0E6;overflow-x:clip}
   .legal{flex-direction:column}
 }
 
+
+/* Pré-diagnostic */
+.ov{position:fixed;inset:0;z-index:50;background:rgba(30,42,48,.55);display:flex;align-items:flex-start;justify-content:center;padding:4vh 16px;overflow-y:auto}
+.ov[hidden]{display:none}
+.dlg{background:#F5F0E6;color:#1E2A30;width:100%;max-width:640px;border-radius:6px;padding:32px;font:17px/1.55 'Public Sans',system-ui,sans-serif;position:relative}
+.dlg h2{font:400 32px/1.15 'Fraunces',Georgia,serif;margin:6px 0 20px;text-wrap:balance}
+.dlg .x{position:absolute;top:14px;right:14px;width:44px;height:44px;border:1px solid #C9BFAE;border-radius:4px;background:transparent;cursor:pointer;font-size:22px;line-height:1;color:#1E2A30}
+.bar{height:4px;background:#E7DECD;border-radius:2px;margin:18px 0 4px;overflow:hidden}.bar i{display:block;height:100%;background:#A84A2A;transition:width .25s}
+.step-n{font-size:14px;color:#55606A}
+.opts{display:flex;flex-direction:column;gap:10px;margin:0;padding:0;border:0}
+.opt{display:flex;align-items:center;gap:12px;min-height:52px;padding:10px 16px;border:1px solid #C9BFAE;border-radius:4px;background:#FFFDF8;cursor:pointer}
+.opt:hover{border-color:#1E2A30}.opt input{width:20px;height:20px;accent-color:#A84A2A;margin:0;flex:none}
+.opt:has(input:checked){border-color:#A84A2A;background:#F9ECE7}
+.nav2{display:flex;justify-content:space-between;gap:12px;margin-top:24px;flex-wrap:wrap}
+.fld{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}.fld label{font-weight:600;font-size:15px}
+.fld input{height:48px;box-sizing:border-box;font:16px 'Public Sans',sans-serif;min-height:48px;padding:10px 12px;border:1px solid #8C8273;border-radius:4px;background:#FFFDF8;color:#1E2A30}
+.fld input:focus-visible,.opt:focus-within{outline:3px solid #A84A2A;outline-offset:2px}
+.err{color:#9B2C12;font-size:14px;min-height:20px}
+.chk{display:flex;gap:10px;align-items:flex-start;font-size:15px}.chk input{width:20px;height:20px;margin-top:2px;accent-color:#A84A2A;flex:none}
+.reco{border-top:3px solid #1E2A30;padding-top:14px;margin-top:18px}.reco h3{font:600 22px/1.25 'Fraunces',Georgia,serif;margin:0 0 6px}
+.reco p{margin:0;color:#2E3A40}.reco .pr{font-weight:600;color:#1E2A30;margin-top:6px}
+.warn{background:#EFE8DA;border:1px solid #C9BFAE;border-radius:4px;padding:14px 16px;font-size:15px;margin-top:22px}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:60;background:#1E2A30;color:#F5F0E6;padding:14px 20px;border-radius:4px;font:15px/1.4 'Public Sans',sans-serif;max-width:min(92vw,520px);box-shadow:0 6px 24px rgba(0,0,0,.2)}
+.toast[hidden]{display:none}
+body.lock{overflow:hidden}
+@media (max-width:640px){.dlg{padding:24px 20px}.dlg h2{font-size:26px}.nav2 .btn{flex:1}}
+@media (prefers-reduced-motion:reduce){.bar i{transition:none}}
 </style>
 </head>
 <body>
-<div class="note">Aperçu de maquette : textes et prix réels, photos et liens pas encore branchés.</div>
+<div class="note">Aperçu de maquette : textes et prix réels. Les photos manquent et le questionnaire n'envoie rien.</div>
 <div class="rb" style="font-family: 'Public Sans', system-ui, sans-serif; color: #1E2A30">
 
 <header>
 <div class="wrap top">
-<a href="#" class="logo">Robin Borreil</a>
+<a href="#top" class="logo">Robin Borreil</a>
 <nav class="nav" aria-label="Navigation principale">
-<a href="#">Solutions</a>
-<a href="#">Formations</a>
-<a href="#">Réalisations</a>
-<a href="#">Ressources</a>
-<a href="#">À propos</a>
-<a href="#" class="btn" style="min-height: 48px; padding: 0 20px">Faire le diagnostic</a>
+<a href="#solutions">Solutions</a>
+<a href="#formations">Formations</a>
+<a href="#realisations">Réalisations</a>
+<a href="#" data-soon="Les guides pratiques seront publiés avec le site.">Ressources</a>
+<a href="#a-propos">À propos</a>
+<a href="#prediagnostic" data-diag class="btn" style="min-height: 48px; padding: 0 20px">Faire le diagnostic</a>
 </nav>
 <button type="button" class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="drawer"><svg class="i-open" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" fill="none" stroke="#1E2A30" stroke-width="1.8"><path d="M0 1h20M0 7h20M0 13h20"/></svg><svg class="i-close" width="18" height="18" viewBox="0 0 18 18" aria-hidden="true" fill="none" stroke="#1E2A30" stroke-width="1.8"><path d="M2 2l14 14M16 2L2 16"/></svg></button>
 </div>
 <div class="wrap drawer" id="drawer" hidden>
-<a href="#" class="item">Solutions <span aria-hidden="true">→</span></a>
-<a href="#" class="item">Formations <span aria-hidden="true">→</span></a>
-<a href="#" class="item">Réalisations <span aria-hidden="true">→</span></a>
-<a href="#" class="item">Ressources <span aria-hidden="true">→</span></a>
-<a href="#" class="item">À propos <span aria-hidden="true">→</span></a>
-<a href="#" class="item">Contact <span aria-hidden="true">→</span></a>
+<a href="#solutions" class="item">Solutions <span aria-hidden="true">→</span></a>
+<a href="#formations" class="item">Formations <span aria-hidden="true">→</span></a>
+<a href="#realisations" class="item">Réalisations <span aria-hidden="true">→</span></a>
+<a href="#" data-soon="Les guides pratiques seront publiés avec le site." class="item">Ressources <span aria-hidden="true">→</span></a>
+<a href="#a-propos" class="item">À propos <span aria-hidden="true">→</span></a>
+<a href="#contact" class="item">Contact <span aria-hidden="true">→</span></a>
 <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 24px">
-<a href="#" class="btn">Faire le pré-diagnostic gratuit</a>
+<a href="#prediagnostic" data-diag class="btn">Faire le pré-diagnostic gratuit</a>
 <a href="tel:+33777890103" class="btn btn-ghost">Appeler · 07 77 89 01 03</a>
 </div>
 </div>
 </header>
 
 <main>
-<section class="wrap hero">
+<section class="wrap hero" id="top">
 <div>
 <p class="eyebrow" style="margin-bottom: 20px">Partenaire numérique des petites entreprises · Pays basque</p>
 <h1 class="h1">Le web, l'IA et les bons outils, au service de votre activité. <span style="color: #A84A2A">Pas l'inverse.</span></h1>
 <p class="lead" style="margin-top: 28px">J'aide les petites entreprises à développer leur activité et à simplifier leur quotidien. Je commence par comprendre votre métier, puis je choisis avec vous ce qui vous sert vraiment.</p>
 <div class="actions">
-<a href="#" class="btn">Pré-diagnostic gratuit · 5 min</a>
-<a href="#" class="ulink">Voir les tarifs</a>
+<a href="#prediagnostic" data-diag class="btn">Pré-diagnostic gratuit · 5 min</a>
+<a href="#tarifs" class="ulink">Voir les tarifs</a>
 </div>
 </div>
 <div style="display: flex; flex-direction: column; gap: 16px">
@@ -157,7 +184,7 @@ body{margin:0;background:#F5F0E6;overflow-x:clip}
 </div>
 </section>
 
-<section class="band">
+<section class="band" id="situations">
 <div class="wrap section split">
 <div>
 <p class="num">01</p>
@@ -174,7 +201,7 @@ body{margin:0;background:#F5F0E6;overflow-x:clip}
 </div>
 </section>
 
-<section class="wrap section">
+<section class="wrap section" id="solutions">
 <p class="num">02</p>
 <h2 class="h2" style="margin-bottom: 48px">Trois façons de travailler ensemble, dans cet ordre.</h2>
 <div class="g3">
@@ -182,24 +209,24 @@ body{margin:0;background:#F5F0E6;overflow-x:clip}
 <h3 class="h3">Comprendre</h3>
 <p class="body2">Un diagnostic de votre site, de votre visibilité et de vos outils. Vous repartez avec un plan d'action priorisé, y compris ce qu'il ne faut pas faire.</p>
 <p style="font-weight: 600">290 € HT</p>
-<a href="#" class="ulink">Le diagnostic</a>
+<a href="#methode" class="ulink">Le diagnostic</a>
 </div>
 <div class="rule">
 <h3 class="h3">Construire</h3>
 <p class="body2">Site, fiche Google, assistant IA configuré pour votre métier, automatisations simples. Seulement ce que le diagnostic a justifié.</p>
 <p style="font-weight: 600">Sur devis · repères publics</p>
-<a href="#" class="ulink">Les solutions</a>
+<a href="#exemples" class="ulink">Les solutions</a>
 </div>
 <div class="rule">
 <h3 class="h3">Accompagner</h3>
 <p class="body2">Un interlocuteur qui connaît vos outils, avec un temps d'intervention inclus chaque mois et des limites écrites.</p>
 <p style="font-weight: 600">De 49 € à 490 € HT/mois</p>
-<a href="#" class="ulink">Les abonnements</a>
+<a href="#tarifs" class="ulink">Les abonnements</a>
 </div>
 </div>
 </section>
 
-<section class="band">
+<section class="band" id="exemples">
 <div class="wrap section">
 <p class="num">03</p>
 <h2 class="h2">À quoi ça ressemble, concrètement.</h2>
@@ -230,7 +257,7 @@ body{margin:0;background:#F5F0E6;overflow-x:clip}
 </div>
 </section>
 
-<section class="wrap section">
+<section class="wrap section" id="methode">
 <p class="num">04</p>
 <h2 class="h2" style="margin-bottom: 48px">Une méthode simple, en quatre temps.</h2>
 <ol class="g4" style="list-style: none; padding: 0">
@@ -241,13 +268,13 @@ body{margin:0;background:#F5F0E6;overflow-x:clip}
 </ol>
 </section>
 
-<section class="band">
+<section class="band" id="tarifs">
 <div class="wrap section split">
 <div>
 <p class="num">05</p>
 <h2 class="h2">Des prix clairs, des limites écrites.</h2>
 <p class="body2" style="margin-top: 20px">Prix HT, TVA non applicable (art. 293 B du CGI).</p>
-<a href="#" class="btn btn-ghost" style="margin-top: 28px">Tous les tarifs</a>
+<a href="#tarifs" class="btn btn-ghost" style="margin-top: 28px" data-soon="La page Tarifs détaillée (périmètres, exclusions, déplacements) arrive avec le site.">Tous les tarifs</a>
 </div>
 <div class="offers">
 <div class="offer"><h3 class="h3" style="font-size: 22px">Diagnostic</h3><p class="desc body2">Analyse, restitution et plan d'action. Déduit si vous signez sous 60 jours.</p><p class="price">290 €</p></div>
@@ -259,18 +286,18 @@ body{margin:0;background:#F5F0E6;overflow-x:clip}
 </div>
 </section>
 
-<section class="wrap section">
+<section class="wrap section" id="realisations">
 <p class="num">06</p>
 <h2 class="h2" style="margin-bottom: 48px">Quelques réalisations.</h2>
 <div class="g3">
-<a href="#" style="text-decoration: none; display: flex; flex-direction: column; gap: 14px"><div class="photo shot">[Capture du site Couverture Puel]</div><p class="eyebrow">Couvreur</p><h3 class="h3">Couverture Puel</h3></a>
-<a href="#" style="text-decoration: none; display: flex; flex-direction: column; gap: 14px"><div class="photo shot">[Capture du site La Quincaillerie]</div><p class="eyebrow">Restaurant</p><h3 class="h3">La Quincaillerie</h3></a>
-<a href="#" style="text-decoration: none; display: flex; flex-direction: column; gap: 14px"><div class="photo shot">[Capture du site B.M.C &amp; Associés]</div><p class="eyebrow">Cabinet d'avocats</p><h3 class="h3">B.M.C &amp; Associés</h3></a>
+<div style="display: flex; flex-direction: column; gap: 14px"><div class="photo shot">[Capture du site Couverture Puel]</div><p class="eyebrow">Couvreur</p><h3 class="h3">Couverture Puel</h3></div>
+<div style="display: flex; flex-direction: column; gap: 14px"><div class="photo shot">[Capture du site La Quincaillerie]</div><p class="eyebrow">Restaurant</p><h3 class="h3">La Quincaillerie</h3></div>
+<div style="display: flex; flex-direction: column; gap: 14px"><div class="photo shot">[Capture du site B.M.C &amp; Associés]</div><p class="eyebrow">Cabinet d'avocats</p><h3 class="h3">B.M.C &amp; Associés</h3></div>
 </div>
-<a href="#" class="ulink" style="display: inline-block; margin-top: 36px">Toutes les réalisations</a>
+<a href="#realisations" data-soon="Les études de cas seront rédigées avec l'accord de chaque client." class="ulink" style="display: inline-block; margin-top: 36px">Toutes les réalisations</a>
 </section>
 
-<section class="band">
+<section class="band" id="formations">
 <div class="wrap section">
 <p class="num">07</p>
 <h2 class="h2">Ateliers et formations.</h2>
@@ -280,22 +307,22 @@ body{margin:0;background:#F5F0E6;overflow-x:clip}
 <div class="rule"><h3 class="h3">Être visible localement sans exploser son budget</h3><p class="body2">Fiche Google, avis, annuaires : la méthode pas à pas.</p></div>
 <div class="rule"><h3 class="h3">Repérer les tâches qui vous coûtent du temps</h3><p class="body2">Cartographier sa semaine et choisir quoi simplifier.</p></div>
 </div>
-<a href="#" class="ulink" style="display: inline-block; margin-top: 36px">Le catalogue des ateliers</a>
+<a href="#formations" data-soon="Les fiches programme détaillées arrivent en phase 6." class="ulink" style="display: inline-block; margin-top: 36px">Le catalogue des ateliers</a>
 </div>
 </section>
 
-<section class="wrap section about">
+<section class="wrap section about" id="a-propos">
 <div class="photo" style="aspect-ratio: 4 / 5">[Portrait de Robin — à prendre]</div>
 <div>
 <p class="num">08</p>
 <h2 class="h2">Un parcours business, un métier technique.</h2>
 <p class="body2" style="margin-top: 24px">Je suis Robin Borreil. Diplômé de l'ESSEC (BBA), j'ai d'abord travaillé en gestion de projet avant de me reconvertir dans le développement web, il y a environ cinq ans. J'ai aussi enseigné l'économie-gestion pendant six mois.</p>
 <p class="body2" style="margin-top: 16px">Je parle de vos clients, de votre temps et de votre chiffre d'affaires avant de parler d'outils. Et si la bonne réponse n'est pas un nouveau site, je vous le dis.</p>
-<a href="#" class="ulink" style="display: inline-block; margin-top: 28px">En savoir plus</a>
+<a href="#a-propos" data-soon="La page À propos complète arrive avec le site." class="ulink" style="display: inline-block; margin-top: 28px">En savoir plus</a>
 </div>
 </section>
 
-<section class="band">
+<section class="band" id="faq">
 <div class="wrap section split">
 <div>
 <p class="num">09</p>
@@ -311,41 +338,138 @@ body{margin:0;background:#F5F0E6;overflow-x:clip}
 </div>
 </section>
 
-<section class="dark">
+<section class="dark" id="commencer">
 <div class="wrap section cta">
 <h2 class="h2" style="margin: 0">Par où commencer&nbsp;? Cinq minutes de questions, puis vingt minutes au téléphone.</h2>
 <div style="display: flex; flex-direction: column; gap: 18px; align-items: flex-start">
 <p style="color: #D9D2C4">Gratuit et sans engagement. Si vous n'avez besoin de rien, je vous le dirai.</p>
-<a href="#" class="btn btn-light">Faire le pré-diagnostic gratuit</a>
+<a href="#prediagnostic" data-diag class="btn btn-light">Faire le pré-diagnostic gratuit</a>
 </div>
 </div>
 </section>
 </main>
 
-<footer class="wrap">
+<footer class="wrap" id="contact">
 <div class="foot">
 <div class="brand" style="display: flex; flex-direction: column; gap: 10px">
-<a href="#" class="logo">Robin Borreil</a>
+<a href="#top" class="logo">Robin Borreil</a>
 <p class="muted">Partenaire numérique des petites entreprises. Basé au Pays basque, intervention dans toute la France.</p>
 </div>
-<div><h3>Solutions</h3><ul><li><a href="#">Diagnostic</a></li><li><a href="#">Web et visibilité</a></li><li><a href="#">IA et automatisation</a></li><li><a href="#">Accompagnement</a></li><li><a href="#">Tarifs</a></li></ul></div>
-<div><h3>Pour qui</h3><ul><li><a href="#">Artisans</a></li><li><a href="#">Restaurants et hébergements</a></li><li><a href="#">Indépendants et cabinets</a></li></ul></div>
-<div><h3>Contact</h3><ul><li><a href="tel:+33777890103">07 77 89 01 03</a></li><li><a href="mailto:contact@robinborreil.fr">contact@robinborreil.fr</a></li><li><a href="#">Prendre rendez-vous</a></li></ul></div>
+<div><h3>Solutions</h3><ul><li><a href="#methode">Diagnostic</a></li><li><a href="#solutions">Web et visibilité</a></li><li><a href="#exemples">IA et automatisation</a></li><li><a href="#tarifs">Accompagnement</a></li><li><a href="#tarifs">Tarifs</a></li></ul></div>
+<div><h3>Pour qui</h3><ul><li><a href="#exemples">Artisans</a></li><li><a href="#exemples">Restaurants et hébergements</a></li><li><a href="#exemples">Indépendants et cabinets</a></li></ul></div>
+<div><h3>Contact</h3><ul><li><a href="tel:+33777890103">07 77 89 01 03</a></li><li><a href="mailto:contact@robinborreil.fr">contact@robinborreil.fr</a></li><li><a href="#prediagnostic" data-diag>Prendre rendez-vous</a></li></ul></div>
 </div>
 <div class="legal">
 <span>© 2026 Robin Borreil · Prix HT, TVA non applicable, art. 293 B du CGI</span>
-<span style="display: flex; flex-wrap: wrap; gap: 20px"><a href="#">Mentions légales</a><a href="#">Confidentialité</a><a href="#">CGV</a></span>
+<span style="display: flex; flex-wrap: wrap; gap: 20px"><a href="#" data-soon="Rédigées dès réception du statut juridique et du SIRET.">Mentions légales</a><a href="#" data-soon="Rédigée dès réception du statut juridique et du SIRET.">Confidentialité</a><a href="#" data-soon="Rédigées à partir des conditions des abonnements, après relecture juridique.">CGV</a></span>
 </div>
 </footer>
 
 </div>
+
+<div class="ov" id="ov" hidden>
+<div class="dlg" role="dialog" aria-modal="true" aria-labelledby="dlg-t">
+<button type="button" class="x" id="dlg-x" aria-label="Fermer le questionnaire">×</button>
+<p class="eyebrow">Pré-diagnostic gratuit</p>
+<div class="bar" aria-hidden="true"><i id="bar"></i></div>
+<p class="step-n" id="stepn" aria-live="polite"></p>
+<div id="dlg-body"></div>
+</div>
+</div>
+<div class="toast" id="toast" role="status" hidden></div>
 <script>
 {
-const b=document.getElementById('burger'),d=document.getElementById('drawer'),h=document.querySelector('.rb header');
-b.addEventListener('click',()=>{const o=b.getAttribute('aria-expanded')!=='true';b.setAttribute('aria-expanded',String(o));b.setAttribute('aria-label',o?'Fermer le menu':'Ouvrir le menu');d.hidden=!o;});
-document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!d.hidden){d.hidden=true;b.setAttribute('aria-expanded','false');b.focus();}});
-document.querySelectorAll('a[href="#"]').forEach(a=>a.addEventListener('click',e=>e.preventDefault()));
+const $=q=>document.querySelector(q);
+const b=$('#burger'),d=$('#drawer'),h=document.querySelector('.rb header');
+const setMenu=o=>{b.setAttribute('aria-expanded',String(o));b.setAttribute('aria-label',o?'Fermer le menu':'Ouvrir le menu');d.hidden=!o;};
+b.addEventListener('click',()=>setMenu(b.getAttribute('aria-expanded')!=='true'));
+d.addEventListener('click',e=>{if(e.target.closest('a'))setMenu(false);});
 const onS=()=>h.classList.toggle('scrolled',window.scrollY>8);window.addEventListener('scroll',onS,{passive:true});onS();
+
+let tt;const toast=$('#toast');
+const say=m=>{toast.textContent=m;toast.hidden=false;clearTimeout(tt);tt=setTimeout(()=>toast.hidden=true,4200);};
+document.addEventListener('click',e=>{const a=e.target.closest('a[data-soon]');if(!a)return;if(a.getAttribute('href')==='#')e.preventDefault();say(a.dataset.soon);});
+
+const Q=[
+{k:'secteur',t:'Quelle est votre activité ?',o:['Artisan, bâtiment','Restaurant, hébergement, conciergerie','Indépendant, cabinet, conseil, formation','Commerce','Autre structure (association, PME…)']},
+{k:'taille',t:'Combien êtes-vous dans l\'entreprise ?',o:['Seul(e)','2 à 5','6 à 20','Plus de 20']},
+{k:'site',t:'Votre site internet aujourd\'hui :',o:['Je n\'en ai pas','Il existe, mais il ne m\'apporte rien','Il fonctionne correctement','Je ne sais pas trop']},
+{k:'google',t:'Votre fiche Google (horaires, avis, photos) :',o:['Je n\'en ai pas, ou je ne l\'ai jamais regardée','Elle existe, mais elle est peu remplie','Elle est à jour, avec des avis']},
+{k:'temps',t:'Qu\'est-ce qui vous prend le plus de temps ?',o:['Les devis et les relances','Répondre aux mêmes questions','L\'administratif et les documents','Trouver de nouveaux clients','Rien de particulier']},
+{k:'ia',t:'Et l\'intelligence artificielle ?',o:['Je ne l\'utilise pas','Un peu, sans vraie méthode','Régulièrement']},
+{k:'prio',t:'Votre priorité pour les six prochains mois :',o:['Recevoir plus de demandes','Gagner du temps','Mettre de l\'ordre dans mes outils','Former mon équipe']},
+{k:'budget',t:'Le budget que vous envisagez :',o:['Moins de 500 €','500 à 1 500 €','1 500 à 3 500 €','Plus de 3 500 €','Je ne sais pas encore']}
+];
+const A={};let i=0,lastFocus=null;
+const ov=$('#ov'),body=$('#dlg-body'),bar=$('#bar'),stepn=$('#stepn');
+const esc=v=>String(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const total=Q.length+1;
+function render(){
+  bar.style.width=Math.round(Math.min(i,total)/total*100)+'%';
+  if(i<Q.length){
+    const q=Q[i];stepn.textContent='Question '+(i+1)+' sur '+Q.length;
+    body.innerHTML='<h2 id="dlg-t">'+q.t+'</h2><fieldset class="opts"><legend class="step-n" style="position:absolute;left:-9999px">'+q.t+'</legend>'+
+      q.o.map((o,j)=>'<label class="opt"><input type="radio" name="'+q.k+'" value="'+j+'"'+(A[q.k]===j?' checked':'')+'>'+o+'</label>').join('')+
+      '</fieldset><p class="err" id="err" aria-live="polite"></p><div class="nav2">'+(i>0?'<button type="button" class="btn btn-ghost" id="prev">Retour</button>':'<span></span>')+
+      '<button type="button" class="btn" id="next">Continuer</button></div>';
+    body.querySelectorAll('input').forEach(r=>r.addEventListener('change',()=>{A[q.k]=+r.value;setTimeout(()=>{i++;render();},160);}));
+    $('#next').addEventListener('click',()=>{if(A[q.k]===undefined){$('#err').textContent='Choisissez une réponse pour continuer.';return;}i++;render();});
+    const p=$('#prev');if(p)p.addEventListener('click',()=>{i--;render();});
+    (body.querySelector('input:checked')||body.querySelector('input')).focus();
+  }else if(i===Q.length){
+    stepn.textContent='Dernière étape';
+    body.innerHTML='<h2 id="dlg-t">Où puis-je vous rappeler ?</h2><form id="f" novalidate>'+
+      '<div class="fld"><label for="f-n">Prénom et nom</label><input id="f-n" autocomplete="name" required><span class="err" id="e-n"></span></div>'+
+      '<div class="fld"><label for="f-e">Email</label><input id="f-e" type="email" autocomplete="email" required><span class="err" id="e-e"></span></div>'+
+      '<div class="fld"><label for="f-t">Téléphone (facultatif)</label><input id="f-t" type="tel" autocomplete="tel"><span class="err" id="e-t"></span></div>'+
+      '<div class="fld"><label for="f-c">Entreprise et commune</label><input id="f-c" autocomplete="organization"><span class="err"></span></div>'+
+      '<label class="chk"><input type="checkbox" id="f-ok"><span>J\'accepte que ces informations servent uniquement à répondre à ma demande.</span></label><p class="err" id="e-ok"></p>'+
+      '<div class="nav2"><button type="button" class="btn btn-ghost" id="prev">Retour</button><button type="submit" class="btn">Voir le résultat</button></div></form>';
+    $('#prev').addEventListener('click',()=>{i--;render();});
+    $('#f').addEventListener('submit',e=>{
+      e.preventDefault();let ok=true;
+      const n=$('#f-n').value.trim(),em=$('#f-e').value.trim(),t=$('#f-t').value.trim();
+      $('#e-n').textContent=n?'':'Indiquez votre nom.';ok=ok&&!!n;
+      const ev=/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(em);$('#e-e').textContent=ev?'':'Indiquez une adresse email valide.';ok=ok&&ev;
+      const tv=!t||/^[+0-9 .()-]{9,}$/.test(t);$('#e-t').textContent=tv?'':'Ce numéro semble incomplet.';ok=ok&&tv;
+      $('#e-ok').textContent=$('#f-ok').checked?'':'Cette case est nécessaire pour traiter votre demande.';ok=ok&&$('#f-ok').checked;
+      if(!ok){const f=body.querySelector('.err:not(:empty)');if(f)(f.previousElementSibling||f).focus();return;}
+      A.nom=n;A.email=em;A.tel=t;A.ent=$('#f-c').value.trim();i++;render();
+    });
+    $('#f-n').focus();
+  }else{
+    stepn.textContent='Votre orientation';
+    const R=reco();
+    body.innerHTML='<h2 id="dlg-t" tabindex="-1">Merci '+esc(A.nom.split(' ')[0])+'. Voici par où je commencerais.</h2>'+
+      R.map(r=>'<div class="reco"><h3>'+r[0]+'</h3><p>'+r[1]+'</p><p class="pr">'+r[2]+'</p></div>').join('')+
+      '<div class="warn"><strong>Aperçu de maquette :</strong> rien n\'a été envoyé. Sur le vrai site, vos réponses me parviennent et je vous propose un créneau de 20 minutes.</div>'+
+      '<div class="nav2"><button type="button" class="btn btn-ghost" id="restart">Recommencer</button><button type="button" class="btn" id="close2">Fermer</button></div>';
+    $('#restart').addEventListener('click',()=>{for(const k in A)delete A[k];i=0;render();});
+    $('#close2').addEventListener('click',closeD);
+    $('#dlg-t').focus();
+  }
+}
+function reco(){
+  const r=[];const sec=A.secteur;
+  const webWeak=A.site===0||A.site===1, gWeak=A.google!==2;
+  const timeSink=[0,1,2].includes(A.temps), iaLow=A.ia!==2;
+  if(gWeak)r.push(['Être trouvé près de chez vous','Votre fiche Google est le premier levier, avant même le site. '+(sec===1?'Pour un restaurant ou un hébergement, horaires justes et réponses aux avis changent beaucoup de choses.':'Photos, services, avis : c\'est souvent là que le client vous choisit.'),'Pack visibilité locale · dès 390 € HT']);
+  if(webWeak)r.push([A.site===0?'Un site simple qui inspire confiance':'Refaire travailler votre site',sec===0?'Centré sur vos réalisations et une demande de devis complète (travaux, commune, photos).':'Court, rapide, avec un seul objectif : vous amener des demandes.','Site vitrine · dès 1 290 € HT']);
+  if(timeSink)r.push([A.temps===0?'Accélérer devis et relances':A.temps===1?'Ne plus répondre dix fois aux mêmes questions':'Alléger l\'administratif',iaLow?'Un assistant IA configuré pour votre métier, avec des règles claires sur vos données, et une ou deux automatisations simples.':'Structurer ce que vous faites déjà avec l\'IA, et automatiser les étapes répétitives.','Assistant IA · dès 490 € HT · automatisation simple · dès 390 € HT']);
+  if(A.prio===3||A.taille>=2)r.push(['Former l\'équipe','Un atelier pratique sur l\'IA au travail et la protection des données, adapté à votre activité.','Demi-journée en entreprise · 690 € HT']);
+  if(r.length===0||r.length>=3||A.prio===2||A.budget===4)r.unshift(['Commencer par le diagnostic','Plusieurs pistes se dessinent : un diagnostic permet de les classer et de ne financer que ce qui compte. Il est déduit si vous signez sous 60 jours.','Diagnostic numérique · 290 € HT']);
+  return r.slice(0,3);
+}
+function openD(e){if(e)e.preventDefault();lastFocus=document.activeElement;setMenu(false);ov.hidden=false;document.body.classList.add('lock');if(i>Q.length)i=0;render();}
+function closeD(){ov.hidden=true;document.body.classList.remove('lock');if(lastFocus)lastFocus.focus();}
+document.querySelectorAll('[data-diag]').forEach(a=>a.addEventListener('click',openD));
+$('#dlg-x').addEventListener('click',closeD);
+ov.addEventListener('click',e=>{if(e.target===ov)closeD();});
+document.addEventListener('keydown',e=>{
+  if(e.key==='Escape'){if(!ov.hidden)closeD();else if(!d.hidden){setMenu(false);b.focus();}}
+  if(e.key==='Tab'&&!ov.hidden){const f=[...ov.querySelectorAll('button,input,[href]')].filter(x=>!x.disabled);const a=f[0],z=f[f.length-1];if(e.shiftKey&&document.activeElement===a){e.preventDefault();z.focus();}else if(!e.shiftKey&&document.activeElement===z){e.preventDefault();a.focus();}}
+});
+if(location.hash==='#prediagnostic')openD();
 }
 </script>
 </body>
