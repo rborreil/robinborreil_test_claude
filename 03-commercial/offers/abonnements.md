@@ -1,58 +1,49 @@
 # Abonnements — périmètre et conditions
 
-Version 1, du 24/11/2026. Ce document est la base des conditions particulières remises au client. **À faire relire par un juriste avant la première signature.** Prix HT, TVA non applicable (art. 293 B du CGI).
+Version 2 du 25/11/2026. Elle passe de 4 formules à 2 formules publiques plus le sur mesure (voir `00-strategy/revue-critique.md`). **À faire relire par un juriste avant la première signature.** Prix HT, TVA non applicable (art. 293 B du CGI).
 
-## Les quatre formules
+## Les formules
 
-| | Socle technique | Essentiel | Évolution | Partenaire |
-| --- | --- | --- | --- | --- |
-| Prix mensuel HT | 49 € | 99 € | 249 € | 490 € |
-| Pour qui | Un site, rien d'autre | Une petite structure qui veut un interlocuteur de confiance | Une entreprise qui fait évoluer ses outils régulièrement | Une structure qui externalise son pôle numérique |
-| Hébergement du site, certificat HTTPS, sauvegardes hebdomadaires, mises à jour, surveillance de disponibilité | Oui | Oui | Oui | Oui |
-| Temps d'intervention inclus par mois | 30 min | 1 h | 3 h | 6 h |
-| Périmètre du temps | Site | Site, fiche Google, outils installés par Robin, questions d'usage | Idem, plus petites évolutions et maintenance des automatisations existantes | Idem, plus nouveaux chantiers priorisés ensemble |
-| Point de suivi | — | — | 30 min par mois (visio) | 1 h par mois, plus une revue trimestrielle d'1 h 30 |
-| Rapport | — | Bilan annuel d'une page | Trimestriel : visibilité, demandes reçues, actions menées | Mensuel |
-| Délai de première réponse | 48 h ouvrées | 48 h ouvrées | 24 h ouvrées | 24 h ouvrées, traitement prioritaire |
-| Engagement minimal | 12 mois | 12 mois | 6 mois, puis sans engagement | 6 mois, puis sans engagement |
+| | Entretien | Accompagnement | Sur mesure |
+| --- | --- | --- | --- |
+| Prix mensuel HT | 49 € | 149 € | Sur devis, à partir de 390 € |
+| En une phrase | « Votre site entretenu, comme une révision de voiture. » | « Quelqu'un qui connaît vos outils et que vous pouvez appeler. » | « Votre service numérique externalisé. » |
+| Pour qui | Tout client qui a un site | Petite structure qui fait évoluer ses outils | Structures de 5 personnes et plus |
+| Hébergement, HTTPS, sauvegardes hebdomadaires, mises à jour, surveillance | Oui | Oui | Oui |
+| Temps inclus par mois | 30 min, sur le site | 2 h, sur le site, la fiche Google et les outils installés, points de suivi compris | Défini au devis |
+| Point de suivi | — | 45 min par trimestre | Mensuel |
+| Délai de première réponse | 48 h ouvrées | 24 h ouvrées | 24 h ouvrées |
+| Engagement | 12 mois | 6 mois, puis sans engagement | 6 mois |
 
-Le temps de suivi des formules Évolution et Partenaire s'ajoute au temps d'intervention inclus ; il n'est pas décompté dessus.
+## Le temps inclus, simplement
 
-## Comment le temps est compté
+- Décompte par demi-heure, noté dans un tableau partagé avec le client.
+- Le temps non utilisé n'est pas reporté. En contrepartie, l'Accompagnement prévoit un point trimestriel qui sert à l'utiliser utilement.
+- Au-delà du temps inclus : 85 €/h, après accord écrit (un email suffit).
+- Une demande de plus de 2 h fait l'objet d'un devis.
 
-- Décompte par tranches de 15 minutes, avec un journal des interventions consultable par le client.
-- Report d'un mois sur l'autre limité au temps d'un mois : le temps non utilisé au bout de deux mois est perdu.
-- Dépassement : facturé 85 €/h, uniquement après accord écrit (un email suffit) au-delà de 30 min.
-- Une demande qui dépasse 2 h fait l'objet d'un devis séparé, même si du temps inclus reste disponible.
+## Exclus de toutes les formules
 
-## Ce qui est exclu de toutes les formules
+- Abonnements logiciels tiers.
+- Rédaction de contenus longs, photos, traductions.
+- Nouveaux sites, nouvelles automatisations ou nouveaux produits (packs, ateliers).
+- Interventions le soir, le week-end ou les jours fériés, sauf accord préalable.
+- Outils que Robin n'a ni installés ni pris en charge par écrit.
 
-- Abonnements logiciels tiers : facturés au réel, ou souscrits directement par le client (recommandé).
-- Nom de domaine : enregistré au nom du client. Son renouvellement est inclus dans les formules si Robin en assure la gestion.
-- Rédaction de contenus longs (articles, pages complètes), photos, traductions.
-- Nouveaux développements, nouveaux sites, nouvelles automatisations au-delà du temps inclus.
-- Interventions le soir, le week-end et les jours fériés, sauf accord préalable.
-- Pannes et pertes de données sur des outils que Robin n'a ni installés ni pris en charge par écrit.
-- Formation des nouveaux salariés au-delà du temps inclus.
+## Engagements réciproques
 
-## Ce que le client s'engage à faire
+- **Le client** donne les accès nécessaires, prévient en cas de changement, valide dans un délai raisonnable, et reste propriétaire et responsable de son site, de ses contenus et de ses données.
+- **Robin** tient le tableau des interventions et remet à la résiliation, sans frais, sous 15 jours, tous les accès, fichiers et documentations.
 
-- Donner les accès nécessaires et prévenir en cas de changement de mot de passe ou de prestataire.
-- Valider les contenus et les évolutions dans un délai raisonnable.
-- Rester propriétaire et responsable légal de son site, de ses contenus et de ses données.
+## Résiliation
 
-## Résiliation et réversibilité
+Après l'engagement minimal, préavis d'un mois, par email.
 
-- Au-delà de l'engagement minimal : résiliation avec un préavis d'un mois, par email.
-- À la résiliation : remise de tous les accès, des fichiers du site, de la documentation des automatisations et des exports de données, sans frais, sous 15 jours.
+## Clients existants
 
-## Clients existants (maintenance Essentiel 49 € et Confort 119 €)
+- **Ancien Essentiel à 49 €** : bascule vers l'Entretien, au même prix, avec 30 min incluses au lieu d'« une petite modification ». À vérifier contrat par contrat.
+- **Ancien Confort à 119 €** : conditions maintenues jusqu'à l'échéance. Ensuite, deux choix : l'Accompagnement à 149 € (2 h, tous les outils, point trimestriel ; l'email professionnel reste inclus pour eux) ou l'Entretien à 49 €. On n'augmente jamais un client en cours d'engagement.
 
-Recommandation, à valider selon le nombre de clients concernés :
+## Pourquoi pas plus de formules
 
-- **Ancien Essentiel à 49 €** : bascule automatique vers le Socle technique, au même prix. Le temps inclus passe d'« une petite modification par mois » à 30 min. C'est au moins équivalent pour le client, à vérifier contrat par contrat.
-- **Ancien Confort à 119 €** : conserver les conditions jusqu'à l'échéance, puis proposer, au choix, Essentiel à 99 € (moins cher, 1 h) ou Évolution à 249 € (point mensuel, 3 h). Ne jamais augmenter un client en cours d'engagement.
-
-## Comment présenter les formules à l'oral
-
-« Le Socle, c'est votre site entretenu, comme une révision de voiture. L'Essentiel, c'est avoir quelqu'un à appeler quand un outil vous bloque. L'Évolution, c'est trois heures par mois de travail sur vos outils, et un point pour décider ensemble de la suite. Le Partenaire, c'est votre service numérique externalisé, pour un prix bien inférieur à un salarié. »
+Quatre formules obligeaient l'artisan à comparer au lieu de décider. Le cas « petite structure qui veut plus que l'entretien » est couvert par l'Accompagnement. Celui de « l'entreprise qui externalise son numérique » est trop rare et trop spécifique pour un prix public : il passe en sur mesure.

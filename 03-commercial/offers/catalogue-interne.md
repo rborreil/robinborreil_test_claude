@@ -1,60 +1,63 @@
-# Catalogue interne des prestations
+# Catalogue des prestations
 
-Document interne, version 1 du 24/11/2026. Les prix sont HT, et ce sont des hypothèses de travail à confronter aux premiers devis. Prix publics « à partir de » : voir la page Tarifs du site.
+Version 2 du 25/11/2026, simplifiée après la revue critique (`00-strategy/revue-critique.md`). Prix HT, TVA non applicable (art. 293 B du CGI). Ce sont des hypothèses à confirmer sur les premiers devis.
 
-**Repère de rentabilité** : un taux horaire réel visé de 70 à 90 €. Les prestations sous ce seuil sont des offres d'acquisition assumées : elles sont signalées.
+**Principe** : on vend **4 produits vitrines**, simples à expliquer en une phrase et à prix fixe ou presque. Le reste se fait à la demande, en interne, sans être mis en avant.
 
-**Règles communes** : acompte de 30 % à la commande (50 % pour les entrepreneurs en création) ; coûts tiers refacturés au réel ou souscrits directement par le client ; comptes et noms de domaine toujours au nom du client.
+**Repère de rentabilité** : 70 à 90 € de l'heure réellement passée. Acompte de 30 % à la commande (50 % pour les entreprises en création). Les comptes et noms de domaine restent au nom du client. Les coûts tiers sont souscrits par le client ou refacturés au réel.
 
-## Comprendre et optimiser
+## La porte d'entrée
 
-| Prestation | Prix HT | Charge | €/h | Prérequis | Risques | Récurrence |
-| --- | --- | --- | --- | --- | --- | --- |
-| Diagnostic numérique | 290 € | 6 à 7 h | ~45 (acquisition) | Questionnaire rempli, accès en lecture aux outils | Client qui attend des solutions toutes faites ; dérive du temps d'analyse | Mène vers Construire dans environ la moitié des cas (hypothèse à mesurer) |
-| Diagnostic approfondi (5 à 20 personnes) | à partir de 690 € | 12 à 15 h | ~50 | Interlocuteur décisionnaire, équipe disponible 3 h | Jeux internes ; attentes floues | Évolution ou Partenaire |
-| Charte d'usage de l'IA | 390 € | 5 h | 78 | Liste des usages actuels, profession identifiée | Professions réglementées : la vérification déontologique reste à la charge du client | Formation intra-entreprise |
+| | Visite découverte | Bilan et plan d'action |
+| --- | --- | --- |
+| Prix | Gratuit | 290 € (déduit de toute prestation signée sous 60 jours) |
+| Format | 45 min sur place au Pays basque, ou en visio | Entretien de 1 h 30, analyse, restitution de 45 min, plan d'action de 2 à 3 pages |
+| Charge | 1 h avec la préparation | Environ 4 h (environ 72 €/h) |
+| Quand la proposer | Toujours, c'est le premier rendez-vous | Seulement si plusieurs chantiers se dessinent, ou pour une structure de plus de 5 personnes |
+| Phrase clé | « Je viens voir comment vous travaillez, et je vous dis honnêtement ce qui vaut le coup. » | « Vous avez déjà eu un diagnostic CCI ou CMA ? Apportez-le, je pars de là. » |
 
-## Construire et transformer — web et visibilité
+Préparation de la visite : 15 min sur la fiche Google, le site et deux concurrents, avec trois constats concrets à montrer.
 
-| Prestation | Prix HT | Charge | €/h | Prérequis | Risques | Récurrence |
-| --- | --- | --- | --- | --- | --- | --- |
-| Optimisation de la fiche Google seule | 190 € | 2,5 h | 76 | Accès propriétaire à la fiche (souvent à récupérer) | Validation de la fiche bloquée par Google | Socle ou Essentiel |
-| Kit avis clients : QR code, message type, modèles de réponse | 150 € | 2 h | 75 | Fiche Google active | Faible | Inclus dans Essentiel |
-| Pack visibilité locale : fiche, annuaires, kit avis | 390 € | 5 h | 78 | Accès aux comptes | Doublons d'annuaires longs à corriger | Essentiel |
-| Site une page | à partir de 1 290 € | 15 à 18 h | ~75 | Textes et photos fournis, ou devisés en plus | Retard de contenus client (clause de délai) | Socle ou Essentiel |
-| Site jusqu'à 5 pages | à partir de 2 190 € | 26 à 30 h | ~75 | Idem | Allers-retours de validation | Essentiel ou Évolution |
-| Site sur mesure | à partir de 3 490 € | 40 à 45 h | ~80 | Cahier des charges validé | Dérive de périmètre : lots et avenants écrits | Évolution |
-| Version bilingue d'un site existant | à partir de 390 € | 5 h | 78 | Traduction validée par le client ou par un traducteur | Qualité de la traduction : la responsabilité est explicitée | Mises à jour de saison |
-| Refonte technique à contenu constant | à partir de 790 € | 10 h | 79 | Accès au site existant | Fonctionnalités cachées découvertes en cours | Socle |
-| Migration d'hébergement ou de domaine | 190 € | 2 h | 95 | Accès registraire et DNS | Coupure d'emails : planifier, prévoir un retour arrière | Socle |
+## Les 4 produits vitrines
 
-## Construire et transformer — IA, outils, automatisation
+| Produit | Prix HT | Contenu | Charge | Pour qui | Suite naturelle |
+| --- | --- | --- | --- | --- | --- |
+| **Être trouvé sur Google** | 390 € | Fiche Google complète (catégories, services, photos, horaires de saison) ; cohérence des principaux annuaires ; kit avis : QR code, message type, 5 modèles de réponse ; 30 min de prise en main | 5 h | Artisans, restaurants, commerçants, hébergeurs | Entretien 49 € ; site |
+| **Site vitrine** | à partir de 1 290 € (une page), 2 190 € (jusqu'à 5 pages) | Site rapide et responsive, demande de contact qualifiée, référencement local de base, mise en ligne de la fiche Google incluse | 16 à 30 h | Ceux dont le site est absent ou ne rapporte rien | Entretien 49 € |
+| **Gagner du temps** | 590 € | Un assistant IA configuré pour un usage précis, une automatisation simple, une règle écrite sur les données, 1 h de prise en main, et un point à 30 jours | 7 h | Artisans (devis, relances), restaurants et conciergeries (réponses clients), indépendants (administratif) | Accompagnement 149 € |
+| **Atelier** | Collectif : 350 à 600 € le forfait de 2 h. Intra-entreprise : 690 € la demi-journée | Ateliers pratiques, voir `04-training/` | 4 à 8 h avec la préparation | Réseaux, associations, TPE | Visites découverte |
 
-| Prestation | Prix HT | Charge | €/h | Prérequis | Risques | Récurrence |
-| --- | --- | --- | --- | --- | --- | --- |
-| Assistant IA configuré pour un métier | à partir de 490 € | 6 h | 82 | Abonnement IA professionnel du client, documents de référence non sensibles | Attentes excessives ; qualité variable des réponses : une démonstration est faite avant la livraison | Ajustements trimestriels (Évolution) |
-| Automatisation simple, par flux | à partir de 390 € | 4 à 5 h | ~85 | Outils en place, comptes accessibles | Panne silencieuse : alerte d'échec et documentation obligatoires | Supervision (Évolution) |
-| Installation d'un outil : rendez-vous, CRM simple, signature | à partir de 290 € | 3,5 h | 83 | Choix de l'outil validé au diagnostic | Outil abandonné après 2 mois : prise en main incluse | Essentiel |
-| Organisation documentaire : arborescence, nommage, droits | à partir de 490 € | 6 h | 82 | Espace de stockage commun existant | Résistance au changement | Essentiel |
-| Tableau de suivi des prospects | à partir de 290 € | 3,5 h | 83 | Liste des étapes commerciales | Non-utilisation | Point mensuel (Évolution) |
+### Programme pilote « Gagner du temps »
 
-## Accompagnement ponctuel
+Il vise les 3 premiers clients, à 350 € au lieu de 590 €. En échange : mesure du temps passé avant et 30 jours après, sur une tâche précise, et témoignage écrit autorisé, même si le résultat est modeste. C'est la seule façon honnête de construire une preuve sur l'IA. On le présente comme tel : « client pilote ».
 
-| Prestation | Prix HT | Charge | €/h | Notes |
-| --- | --- | --- | --- | --- |
-| Intervention hors abonnement | 85 €/h | par tranche de 30 min | 85 | Devis au-delà de 2 h |
-| Prise en main individuelle | 85 €/h, ou 390 € la demi-journée | 1 h à 4 h | 85 à 98 | Sur place au Pays basque ; en visio ailleurs |
-| Formation intra-entreprise | 690 € la demi-journée, 1 190 € la journée | Préparation 3 à 5 h incluse | ~80 | Voir `04-training/` ; NDA à déclarer dans les 3 mois suivant la première convention |
-| Atelier collectif pour un réseau | 350 à 600 € le forfait de 2 h | Préparation 2 h | 90 à 150 | Atelier pilote possible à prix réduit |
+Déclinaisons du pack, mêmes outils et même prix :
 
-## Frais de déplacement
+| Problème | Ce qui est livré |
+| --- | --- |
+| Devis et relances (artisans) | Demande de devis structurée (travaux, commune, photos) ; modèles de devis et de mails préparés avec l'IA ; relance automatique à J+7 |
+| Réponses clients (restaurants, conciergeries) | Base de réponses aux questions fréquentes, en plusieurs langues ; réponses aux avis préparées avec l'IA et relues ; messages voyageurs programmés |
+| Administratif (indépendants, cabinets) | Assistant configuré sur les modèles internes, sans données clients ; classement des documents ; une automatisation (accueil d'un client, factures) |
 
-- Pays basque (moins de 40 km) : inclus.
-- Au-delà dans le département : 0,50 €/km ou forfait annoncé sur le devis.
-- Île-de-France, Bordeaux, Toulouse, Montpellier : transport et hébergement au réel, ou forfait annoncé ; regrouper plusieurs rendez-vous par déplacement.
+## À la demande (non mis en avant)
 
-## Ce qu'on ne vend pas (pour l'instant)
+| Prestation | Prix HT | Charge |
+| --- | --- | --- |
+| Site sur mesure | à partir de 3 490 € | 40 à 45 h |
+| Version bilingue d'un site | à partir de 390 € | 5 h |
+| Refonte technique à contenu constant | à partir de 790 € | 10 h |
+| Migration d'hébergement ou de domaine | 190 € | 2 h |
+| Organisation documentaire, tableau de suivi des prospects | à partir de 290 € | 3,5 h |
+| Charte d'usage de l'IA (TPE de 5 personnes et plus) | 390 € | 5 h |
+| Intervention ponctuelle | 85 €/h, par demi-heure | — |
 
-- Boutique en ligne complexe, applications mobiles, intégrations avec un ERP. On oriente vers un partenaire.
-- Gestion des réseaux sociaux au quotidien (community management).
+## Déplacements
+
+- Pays basque, dans un rayon d'environ 40 km : inclus.
+- Île-de-France, Bordeaux, Toulouse, Montpellier : transport et hébergement au réel, ou forfait annoncé sur le devis. On regroupe les rendez-vous.
+
+## Ce qu'on ne vend pas
+
+- Boutique en ligne complexe, application, intégration avec un ERP : on oriente vers un partenaire.
+- Animation quotidienne des réseaux sociaux.
 - Toute garantie de position sur Google ou de visibilité dans les assistants IA.

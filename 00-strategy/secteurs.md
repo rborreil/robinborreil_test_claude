@@ -1,26 +1,25 @@
 # Analyse des secteurs cibles
 
-Version 1, du 24/11/2026. Cette analyse repose sur des observations générales du marché des TPE. Elle est à enrichir après chaque diagnostic réel. Les gains ne sont jamais promis : chaque fiche indique **comment les mesurer** chez le client.
+Version 1, du 24/11/2026, révisée le 25/11/2026. Cette analyse repose sur des observations générales du marché des TPE. Elle est à enrichir après chaque diagnostic réel. Les gains ne sont jamais promis : chaque fiche indique **comment les mesurer** chez le client.
 
 ## Vue d'ensemble
 
-Les notes vont de 1 (faible) à 3 (fort). « Accès » mesure la facilité à rencontrer ces clients au Pays basque, via le réseau, les CCI, les CMA et le bouche-à-oreille.
+Révisée le 25/11/2026 après la revue critique : **deux secteurs prioritaires** au lieu de six. Un indépendant qui démarre gagne en répétant la même offre auprès du même type de client : le vocabulaire, les exemples et le bouche-à-oreille s'accumulent.
 
-| Secteur | Solvabilité | Récurrence | Accès | Priorité |
-| --- | --- | --- | --- | --- |
-| Artisans du bâtiment | 3 | 2 | 3 | **Lancement** |
-| Restaurateurs | 2 | 2 | 3 | **Lancement** |
-| Conciergeries | 3 | 3 | 2 | **Lancement** |
-| Professions libérales | 3 | 2 | 2 | **Lancement** |
-| Coachs et consultants | 2 | 2 | 3 | **Lancement** |
-| Organismes de formation | 3 | 3 | 2 | **Lancement** |
-| TPE et PME de services | 3 | 3 | 2 | Deuxième temps |
-| Commerçants | 2 | 1 | 3 | Deuxième temps |
-| Indépendants (autres) | 1 | 1 | 3 | Ateliers et formations |
-| Entrepreneurs en création | 1 | 1 | 2 | Ateliers et partenaires (BGE, pépinières) |
-| Associations | 1 | 1 | 2 | Ateliers, tarif adapté, réseau |
+Les notes vont de 1 (faible) à 3 (fort). « Accès » mesure la facilité à rencontrer ces clients au Pays basque.
 
-Les six secteurs « Lancement » se regroupent dans les trois pages « Pour qui » : artisans ; restauration, hébergement et conciergeries ; indépendants et cabinets (libéraux, coachs, consultants, organismes de formation).
+| Secteur | Solvabilité | Récurrence | Accès | Preuve existante | Rôle |
+| --- | --- | --- | --- | --- | --- |
+| Artisans du bâtiment | 3 | 2 | 3 | Couverture Puel | **Prioritaire** : page dédiée, prospection active |
+| Restauration, hébergement, conciergeries | 2 à 3 | 2 à 3 | 3 | La Quincaillerie, La Canaillerie (en cours) | **Prioritaire** : page dédiée, prospection hors saison (novembre à mars) |
+| Commerçants | 2 | 1 | 3 | — | Pack Google et ateliers collectifs via les associations de commerçants |
+| TPE et PME de services | 3 | 3 | 2 | — | Sur mesure via le réseau et les ateliers intra-entreprise ; pas de prospection à froid |
+| Professions libérales | 3 | 2 | 2 | B.M.C & Associés | Au cas par cas : contraintes déontologiques fortes |
+| Coachs, consultants, indépendants | 1 à 2 | 1 | 3 | Baba Yoga | Ateliers ; souvent prescripteurs |
+| Organismes de formation | 3 | 3 | 2 | Jeu Formation | D'abord partenaires (porter des ateliers), ensuite clients |
+| Entrepreneurs en création, associations | 1 | 1 | 2 | — | Ateliers via BGE, pépinières, réseaux ; tarif adapté |
+
+Les analyses détaillées ci-dessous restent valables comme référence. Elles servent à préparer une visite, pas à définir des offres par secteur.
 
 ## Règles communes à tous les secteurs
 

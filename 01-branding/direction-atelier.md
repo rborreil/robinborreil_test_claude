@@ -5,6 +5,8 @@ Elle comprend l'accueil sur ordinateur et sur mobile, la couverture de la plaque
 
 Statut : **en attente de validation**. Le design system sera figé après les retours.
 
+Depuis le 25/11/2026, la référence visuelle et éditoriale est l'aperçu HTML `maquettes/apercu-accueil.html` (accueil révisé en 8 sections). La planche sur canevas montre l'ancienne version des contenus et n'est plus mise à jour.
+
 ## Couleurs (contrastes mesurés sur le papier #F5F0E6)
 
 | Rôle | Couleur | Contraste |

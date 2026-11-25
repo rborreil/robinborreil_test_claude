@@ -8,7 +8,8 @@ Ce dépôt réunit tout ce qui sert à vendre, livrer et faire connaître l'acti
 
 | Besoin | Où regarder |
 | --- | --- |
-| Comprendre le positionnement et les choix validés | `00-strategy/positionnement.md` |
+| Comprendre le positionnement et les choix validés | `00-strategy/positionnement.md` (et `revue-critique.md` pour le pourquoi) |
+| Trouver des clients cette semaine | `00-strategy/acquisition.md` |
 | Savoir à qui je vends quoi, secteur par secteur | `00-strategy/secteurs.md` |
 | Chiffrer une prestation ponctuelle | `03-commercial/offers/catalogue-interne.md` |
 | Expliquer ou contractualiser un abonnement | `03-commercial/offers/abonnements.md` |

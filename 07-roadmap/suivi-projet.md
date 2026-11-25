@@ -1,6 +1,6 @@
 # Suivi de projet
 
-Mis à jour le 24/11/2026.
+Mis à jour le 25/11/2026.
 
 ## Décisions validées
 
@@ -16,6 +16,7 @@ Mis à jour le 24/11/2026.
 | 24/11/2026 | Dépôt | Nouveau dépôt Git dédié. |
 | 24/11/2026 | TVA | Franchise en base : prix HT et mention « TVA non applicable, art. 293 B du CGI ». |
 | 24/11/2026 | Formation | Pas de NDA. Démarrage par un atelier pilote. Déclaration d'activité dans les 3 mois suivant la première convention. |
+| 25/11/2026 | Revue critique (à confirmer) | Accroche « Plus de clients, moins de temps perdu. » ; entrée par une visite gratuite de 45 min, bilan à 290 € facultatif ; 4 produits (Google 390 €, site dès 1 290 €, Gagner du temps 590 €, ateliers) ; abonnements 49 € et 149 € plus sur mesure (remplace 99/249/490) ; 2 secteurs prioritaires ; programme pilote IA. Voir `00-strategy/revue-critique.md`. |
 
 ## Avancement
 

@@ -56,14 +56,14 @@ body{margin:0;background:#F5F0E6;overflow-x:clip}
 .quotes li{padding:18px 0;border-bottom:1px solid #C9BFAE}
 .g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:48px}
 .g4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px}
-.rule{border-top:3px solid #1E2A30;padding-top:24px;display:flex;flex-direction:column;gap:12px}
+.rule{border-top:3px solid #1E2A30;padding-top:24px;display:flex;flex-direction:column;gap:12px;height:100%}
 .case{border:1px solid #C9BFAE;border-radius:4px;padding:32px;display:flex;flex-direction:column;gap:20px;background:#F5F0E6}
 .ba{display:grid;grid-template-columns:minmax(0,1fr);gap:16px;font-size:16px}
 .ba ol{padding-left:20px;display:flex;flex-direction:column;gap:6px}
 .after{border-top:2px solid #A84A2A;padding-top:14px}
 .step{display:flex;flex-direction:column;gap:10px}.step .n{font-family:'Fraunces',Georgia,serif;font-size:56px;line-height:1;color:#A84A2A}
 .offers{border-top:1px solid #1E2A30}
-.offer{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,2fr) minmax(0,1fr);gap:32px;align-items:baseline;padding:24px 0;border-bottom:1px solid #C9BFAE}
+.offer{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2.4fr) minmax(0,1fr);gap:32px;align-items:baseline;padding:24px 0;border-bottom:1px solid #C9BFAE}
 .price{font-weight:600;text-align:right;white-space:nowrap}
 .shot{aspect-ratio:4 / 3}
 .about{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:64px;align-items:center}
@@ -137,31 +137,29 @@ body.lock{overflow:hidden}
 </style>
 </head>
 <body>
-<div class="note">Aperçu de maquette : textes et prix réels. Les photos manquent et le questionnaire n'envoie rien.</div>
+<div class="note">Aperçu de maquette (version révisée) : photos à venir, le formulaire n'envoie rien.</div>
 <div class="rb" style="font-family: 'Public Sans', system-ui, sans-serif; color: #1E2A30">
-
 <header>
 <div class="wrap top">
 <a href="#top" class="logo">Robin Borreil</a>
 <nav class="nav" aria-label="Navigation principale">
-<a href="#solutions">Solutions</a>
-<a href="#formations">Formations</a>
+<a href="#offres">Offres</a>
 <a href="#realisations">Réalisations</a>
-<a href="#" data-soon="Les guides pratiques seront publiés avec le site.">Ressources</a>
+<a href="#" data-soon="La page Ateliers (programmes, dates, fiches PDF) arrive avec le site.">Ateliers</a>
 <a href="#a-propos">À propos</a>
-<a href="#prediagnostic" data-diag class="btn" style="min-height: 48px; padding: 0 20px">Faire le diagnostic</a>
+<a href="tel:+33777890103">07 77 89 01 03</a>
+<a href="#visite" data-diag class="btn" style="min-height: 48px; padding: 0 20px">Demander une visite</a>
 </nav>
 <button type="button" class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="drawer"><svg class="i-open" width="20" height="14" viewBox="0 0 20 14" aria-hidden="true" fill="none" stroke="#1E2A30" stroke-width="1.8"><path d="M0 1h20M0 7h20M0 13h20"/></svg><svg class="i-close" width="18" height="18" viewBox="0 0 18 18" aria-hidden="true" fill="none" stroke="#1E2A30" stroke-width="1.8"><path d="M2 2l14 14M16 2L2 16"/></svg></button>
 </div>
 <div class="wrap drawer" id="drawer" hidden>
-<a href="#solutions" class="item">Solutions <span aria-hidden="true">→</span></a>
-<a href="#formations" class="item">Formations <span aria-hidden="true">→</span></a>
+<a href="#offres" class="item">Offres et tarifs <span aria-hidden="true">→</span></a>
 <a href="#realisations" class="item">Réalisations <span aria-hidden="true">→</span></a>
-<a href="#" data-soon="Les guides pratiques seront publiés avec le site." class="item">Ressources <span aria-hidden="true">→</span></a>
+<a href="#" data-soon="La page Ateliers (programmes, dates, fiches PDF) arrive avec le site." class="item">Ateliers <span aria-hidden="true">→</span></a>
 <a href="#a-propos" class="item">À propos <span aria-hidden="true">→</span></a>
-<a href="#contact" class="item">Contact <span aria-hidden="true">→</span></a>
+<a href="#faq" class="item">Questions fréquentes <span aria-hidden="true">→</span></a>
 <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 24px">
-<a href="#prediagnostic" data-diag class="btn">Faire le pré-diagnostic gratuit</a>
+<a href="#visite" data-diag class="btn">Demander une visite gratuite</a>
 <a href="tel:+33777890103" class="btn btn-ghost">Appeler · 07 77 89 01 03</a>
 </div>
 </div>
@@ -171,123 +169,77 @@ body.lock{overflow:hidden}
 <section class="wrap hero" id="top">
 <div>
 <p class="eyebrow" style="margin-bottom: 20px">Partenaire numérique des petites entreprises · Pays basque</p>
-<h1 class="h1">Le web, l'IA et les bons outils, au service de votre activité. <span style="color: #A84A2A">Pas l'inverse.</span></h1>
-<p class="lead" style="margin-top: 28px">J'aide les petites entreprises à développer leur activité et à simplifier leur quotidien. Je commence par comprendre votre métier, puis je choisis avec vous ce qui vous sert vraiment.</p>
+<h1 class="h1">Plus de clients, <span style="color: #A84A2A">moins de temps perdu.</span></h1>
+<p class="lead" style="margin-top: 28px">Site internet, fiche Google et outils simples pour les artisans, restaurants et petites entreprises du Pays basque. Je viens chez vous, je regarde comment vous travaillez, et je ne vous propose que ce qui sert.</p>
 <div class="actions">
-<a href="#prediagnostic" data-diag class="btn">Pré-diagnostic gratuit · 5 min</a>
-<a href="#tarifs" class="ulink">Voir les tarifs</a>
+<a href="#visite" data-diag class="btn">Demander une visite gratuite</a>
+<a href="tel:+33777890103" class="ulink">ou appeler le 07 77 89 01 03</a>
 </div>
 </div>
 <div style="display: flex; flex-direction: column; gap: 16px">
 <div class="photo" style="height: 340px">[Photo de Robin au travail, chez un client — à prendre]</div>
-<p class="muted" style="font-size: 15px">Basé au Pays basque. J'interviens partout en France, à distance ou sur place.</p>
+<p class="muted" style="font-size: 15px">45 minutes sur place au Pays basque, ou en visio ailleurs en France. Gratuit et sans engagement.</p>
 </div>
 </section>
 
 <section class="band" id="situations">
 <div class="wrap section split">
 <div>
-<p class="num">01</p>
 <h2 class="h2">Vous vous reconnaissez&nbsp;?</h2>
 </div>
 <ul class="quotes">
 <li>« Je passe mes soirées sur les devis. »</li>
 <li>« Sur Google, on trouve surtout mes concurrents. »</li>
-<li>« Je réponds dix fois par jour aux mêmes questions. »</li>
-<li>« J'ai payé un site qui ne m'apporte rien. »</li>
-<li style="border-bottom: 0">« Tout le monde parle d'IA, je ne sais pas par où commencer. »</li>
-<li style="border-bottom: 0">« J'ai cinq outils et je n'en utilise vraiment aucun. »</li>
+<li style="border-bottom: 0">« Je réponds dix fois par jour aux mêmes questions. »</li>
+<li style="border-bottom: 0">« J'ai payé un site qui ne m'apporte rien. »</li>
 </ul>
 </div>
 </section>
 
-<section class="wrap section" id="solutions">
-<p class="num">02</p>
-<h2 class="h2" style="margin-bottom: 48px">Trois façons de travailler ensemble, dans cet ordre.</h2>
-<div class="g3">
+<section class="wrap section" id="offres">
+<h2 class="h2">Quatre offres, des prix fixes, des limites écrites.</h2>
+<p class="body2" style="margin: 16px 0 48px; max-width: 680px">Prix HT, TVA non applicable (art. 293 B du CGI). La visite découverte est toujours gratuite.</p>
+<div class="g4">
 <div class="rule">
-<h3 class="h3">Comprendre</h3>
-<p class="body2">Un diagnostic de votre site, de votre visibilité et de vos outils. Vous repartez avec un plan d'action priorisé, y compris ce qu'il ne faut pas faire.</p>
-<p style="font-weight: 600">290 € HT</p>
-<a href="#methode" class="ulink">Le diagnostic</a>
+<h3 class="h3">Être trouvé sur Google</h3>
+<p class="body2">Fiche Google complète, annuaires cohérents, méthode simple pour obtenir et répondre aux avis.</p>
+<p style="font-weight: 600; margin-top: auto">390 €</p>
 </div>
 <div class="rule">
-<h3 class="h3">Construire</h3>
-<p class="body2">Site, fiche Google, assistant IA configuré pour votre métier, automatisations simples. Seulement ce que le diagnostic a justifié.</p>
-<p style="font-weight: 600">Sur devis · repères publics</p>
-<a href="#exemples" class="ulink">Les solutions</a>
+<h3 class="h3">Un site qui rapporte</h3>
+<p class="body2">Rapide, clair sur mobile, avec une demande de contact complète. Fiche Google incluse.</p>
+<p style="font-weight: 600; margin-top: auto">dès 1 290 €</p>
 </div>
 <div class="rule">
-<h3 class="h3">Accompagner</h3>
-<p class="body2">Un interlocuteur qui connaît vos outils, avec un temps d'intervention inclus chaque mois et des limites écrites.</p>
-<p style="font-weight: 600">De 49 € à 490 € HT/mois</p>
-<a href="#tarifs" class="ulink">Les abonnements</a>
+<h3 class="h3">Gagner du temps</h3>
+<p class="body2">Devis et relances, réponses aux clients ou administratif : un outil IA configuré pour votre métier et une automatisation simple.</p>
+<p style="font-weight: 600; margin-top: auto">590 €</p>
 </div>
+<div class="rule">
+<h3 class="h3">Ateliers</h3>
+<p class="body2">Pour les réseaux et les équipes : l'IA au quotidien sans risque pour vos données, la visibilité locale.</p>
+<p style="font-weight: 600; margin-top: auto">dès 350 €</p>
+</div>
+</div>
+<div class="offers" style="margin-top: 56px">
+<div class="offer"><h3 class="h3" style="font-size: 22px">Entretien</h3><p class="desc body2">Hébergement, sauvegardes, mises à jour, 30 min de modifications par mois.</p><p class="price">49 €/mois</p></div>
+<div class="offer"><h3 class="h3" style="font-size: 22px">Accompagnement</h3><p class="desc body2">2 h par mois sur le site, Google et vos outils, point trimestriel, réponse sous 24 h.</p><p class="price">149 €/mois</p></div>
+<div class="offer"><h3 class="h3" style="font-size: 22px">Bilan et plan d'action</h3><p class="desc body2">Facultatif, quand plusieurs chantiers se dessinent. Déduit si vous signez sous 60 jours.</p><p class="price">290 €</p></div>
 </div>
 </section>
 
-<section class="band" id="exemples">
+<section class="band" id="methode">
 <div class="wrap section">
-<p class="num">03</p>
-<h2 class="h2">À quoi ça ressemble, concrètement.</h2>
-<p class="eyebrow" style="margin: 16px 0 40px">Exemples illustratifs, pas des cas clients</p>
-<div class="g3 cases">
-<article class="case">
-<div><p class="eyebrow">Artisan couvreur</p><h3 class="h3" style="margin-top: 6px">Des demandes de devis complètes</h3></div>
-<div class="ba">
-<div><p class="muted" style="font-weight: 600; margin-bottom: 8px">Avant</p><ol><li>Appels pendant le chantier</li><li>Photos par SMS, notes papier</li><li>Relances oubliées</li></ol></div>
-<div class="after"><p style="font-weight: 600; margin-bottom: 8px; color: #A84A2A">Après</p><ol><li>Formulaire : travaux, commune, photos</li><li>Demandes dans un tableau partagé</li><li>Relance à J+7 si pas de réponse</li></ol></div>
-</div>
-</article>
-<article class="case">
-<div><p class="eyebrow">Restaurant</p><h3 class="h3" style="margin-top: 6px">Moins d'appels pour des questions pratiques</h3></div>
-<div class="ba">
-<div><p class="muted" style="font-weight: 600; margin-bottom: 8px">Avant</p><ol><li>Horaires faux sur Google</li><li>Carte en photo floue</li><li>Avis sans réponse</li></ol></div>
-<div class="after"><p style="font-weight: 600; margin-bottom: 8px; color: #A84A2A">Après</p><ol><li>Fiche Google à jour chaque saison</li><li>Carte lisible, en français et en anglais</li><li>Réponses aux avis préparées, relues</li></ol></div>
-</div>
-</article>
-<article class="case">
-<div><p class="eyebrow">Consultante</p><h3 class="h3" style="margin-top: 6px">Un assistant IA qui connaît sa méthode</h3></div>
-<div class="ba">
-<div><p class="muted" style="font-weight: 600; margin-bottom: 8px">Avant</p><ol><li>Propositions écrites de zéro</li><li>ChatGPT sans consignes</li><li>Données clients copiées partout</li></ol></div>
-<div class="after"><p style="font-weight: 600; margin-bottom: 8px; color: #A84A2A">Après</p><ol><li>Modèles et consignes prêts</li><li>Ton et méthode respectés</li><li>Règles claires sur les données</li></ol></div>
-</div>
-</article>
-</div>
-</div>
-</section>
-
-<section class="wrap section" id="methode">
-<p class="num">04</p>
-<h2 class="h2" style="margin-bottom: 48px">Une méthode simple, en quatre temps.</h2>
-<ol class="g4" style="list-style: none; padding: 0">
-<li class="step"><span class="n" aria-hidden="true">1</span><h3 class="h3">Écouter</h3><p class="body2">Un questionnaire de 5 minutes, puis 20 minutes au téléphone. Gratuit.</p></li>
-<li class="step"><span class="n" aria-hidden="true">2</span><h3 class="h3">Diagnostiquer</h3><p class="body2">Un entretien sur place ou en visio, puis un plan d'action écrit.</p></li>
-<li class="step"><span class="n" aria-hidden="true">3</span><h3 class="h3">Mettre en place</h3><p class="body2">Un devis clair, des étapes validées, une prise en main incluse.</p></li>
-<li class="step"><span class="n" aria-hidden="true">4</span><h3 class="h3">Accompagner</h3><p class="body2">Si vous le souhaitez : un suivi mensuel, sans engagement long.</p></li>
+<h2 class="h2" style="margin-bottom: 48px">Comment ça se passe.</h2>
+<ol class="g3" style="list-style: none; padding: 0">
+<li class="step"><span class="n" aria-hidden="true">1</span><h3 class="h3">Une visite gratuite</h3><p class="body2">45 minutes chez vous. Je regarde votre fiche Google, votre site et votre façon de travailler.</p></li>
+<li class="step"><span class="n" aria-hidden="true">2</span><h3 class="h3">Une proposition à prix fixe</h3><p class="body2">Sous 48 heures, par écrit. Si rien ne vaut la dépense, je vous le dis.</p></li>
+<li class="step"><span class="n" aria-hidden="true">3</span><h3 class="h3">Mise en place, puis suivi</h3><p class="body2">Livraison avec prise en main. Ensuite, si vous le souhaitez, un entretien mensuel.</p></li>
 </ol>
-</section>
-
-<section class="band" id="tarifs">
-<div class="wrap section split">
-<div>
-<p class="num">05</p>
-<h2 class="h2">Des prix clairs, des limites écrites.</h2>
-<p class="body2" style="margin-top: 20px">Prix HT, TVA non applicable (art. 293 B du CGI).</p>
-<a href="#tarifs" class="btn btn-ghost" style="margin-top: 28px" data-soon="La page Tarifs détaillée (périmètres, exclusions, déplacements) arrive avec le site.">Tous les tarifs</a>
-</div>
-<div class="offers">
-<div class="offer"><h3 class="h3" style="font-size: 22px">Diagnostic</h3><p class="desc body2">Analyse, restitution et plan d'action. Déduit si vous signez sous 60 jours.</p><p class="price">290 €</p></div>
-<div class="offer"><h3 class="h3" style="font-size: 22px">Site vitrine</h3><p class="desc body2">Une à cinq pages, rapide, référencement local de base.</p><p class="price">dès 1 290 €</p></div>
-<div class="offer"><h3 class="h3" style="font-size: 22px">Visibilité locale</h3><p class="desc body2">Fiche Google complète, annuaires, méthode pour les avis.</p><p class="price">dès 390 €</p></div>
-<div class="offer"><h3 class="h3" style="font-size: 22px">Assistant IA</h3><p class="desc body2">Configuré pour votre métier, avec 1 h de prise en main.</p><p class="price">dès 490 €</p></div>
-<div class="offer"><h3 class="h3" style="font-size: 22px">Abonnements</h3><p class="desc body2">De 30 min à 6 h d'intervention incluses par mois.</p><p class="price">49 à 490 €/mois</p></div>
-</div>
 </div>
 </section>
 
 <section class="wrap section" id="realisations">
-<p class="num">06</p>
 <h2 class="h2" style="margin-bottom: 48px">Quelques réalisations.</h2>
 <div class="g3">
 <div style="display: flex; flex-direction: column; gap: 14px"><div class="photo shot">[Capture du site Couverture Puel]</div><p class="eyebrow">Couvreur</p><h3 class="h3">Couverture Puel</h3></div>
@@ -297,53 +249,36 @@ body.lock{overflow:hidden}
 <a href="#realisations" data-soon="Les études de cas seront rédigées avec l'accord de chaque client." class="ulink" style="display: inline-block; margin-top: 36px">Toutes les réalisations</a>
 </section>
 
-<section class="band" id="formations">
-<div class="wrap section">
-<p class="num">07</p>
-<h2 class="h2">Ateliers et formations.</h2>
-<p class="body2" style="margin: 16px 0 40px; max-width: 680px">Des ateliers pratiques de 2 heures à une journée, pour les réseaux professionnels et les entreprises. Utiles même sans suite commerciale.</p>
-<div class="g3">
-<div class="rule"><h3 class="h3">Configurer son IA comme un vrai assistant</h3><p class="body2">Consignes, modèles, et règles pour protéger ses données.</p></div>
-<div class="rule"><h3 class="h3">Être visible localement sans exploser son budget</h3><p class="body2">Fiche Google, avis, annuaires : la méthode pas à pas.</p></div>
-<div class="rule"><h3 class="h3">Repérer les tâches qui vous coûtent du temps</h3><p class="body2">Cartographier sa semaine et choisir quoi simplifier.</p></div>
-</div>
-<a href="#formations" data-soon="Les fiches programme détaillées arrivent en phase 6." class="ulink" style="display: inline-block; margin-top: 36px">Le catalogue des ateliers</a>
-</div>
-</section>
-
-<section class="wrap section about" id="a-propos">
+<section class="band" id="a-propos">
+<div class="wrap section about">
 <div class="photo" style="aspect-ratio: 4 / 5">[Portrait de Robin — à prendre]</div>
 <div>
-<p class="num">08</p>
 <h2 class="h2">Un parcours business, un métier technique.</h2>
-<p class="body2" style="margin-top: 24px">Je suis Robin Borreil. Diplômé de l'ESSEC (BBA), j'ai d'abord travaillé en gestion de projet avant de me reconvertir dans le développement web, il y a environ cinq ans. J'ai aussi enseigné l'économie-gestion pendant six mois.</p>
-<p class="body2" style="margin-top: 16px">Je parle de vos clients, de votre temps et de votre chiffre d'affaires avant de parler d'outils. Et si la bonne réponse n'est pas un nouveau site, je vous le dis.</p>
-<a href="#a-propos" data-soon="La page À propos complète arrive avec le site." class="ulink" style="display: inline-block; margin-top: 28px">En savoir plus</a>
+<p class="body2" style="margin-top: 24px">Je suis Robin Borreil, basé au Pays basque. Diplômé de l'ESSEC (BBA), j'ai d'abord travaillé en gestion de projet avant de me reconvertir dans le développement web, il y a environ cinq ans.</p>
+<p class="body2" style="margin-top: 16px">Je parle de vos chantiers, de vos couverts et de vos clients avant de parler d'outils. Je me déplace aussi en Île-de-France, à Bordeaux, Toulouse et Montpellier.</p>
+</div>
 </div>
 </section>
 
-<section class="band" id="faq">
-<div class="wrap section split">
+<section class="wrap section split" id="faq">
 <div>
-<p class="num">09</p>
 <h2 class="h2">Questions fréquentes.</h2>
 </div>
 <div class="faq">
-<details open><summary>Faut-il forcément refaire mon site&nbsp;?</summary><p class="a">Non. Le diagnostic conclut parfois qu'une fiche Google bien tenue et un bon formulaire suffisent. Je vous le dirai.</p></details>
-<details><summary>Je ne suis pas à l'aise avec le numérique. C'est un problème&nbsp;?</summary><p class="a">C'est même le cas le plus fréquent. Je vous explique sans jargon, et chaque outil est livré avec une prise en main.</p></details>
-<details><summary>Que deviennent mes données avec l'IA&nbsp;?</summary><p class="a">On définit ensemble ce qui peut être confié à un outil d'IA et ce qui ne doit jamais l'être. Les données sensibles restent hors des outils grand public.</p></details>
-<details><summary>Vous intervenez hors du Pays basque&nbsp;?</summary><p class="a">Oui, à distance partout en France, et sur place en Île-de-France, à Bordeaux, Toulouse et Montpellier.</p></details>
+<details open><summary>Faut-il forcément refaire mon site&nbsp;?</summary><p class="a">Non. Souvent, une fiche Google bien tenue et une bonne façon de recevoir les demandes suffisent. Je vous le dirai pendant la visite.</p></details>
+<details><summary>J'ai déjà eu un diagnostic de la CCI ou de la CMA.</summary><p class="a">Parfait, apportez-le. Je pars de son plan d'action et je vous aide à le mettre en place, sans refaire le travail.</p></details>
+<details><summary>Et l'intelligence artificielle, dans tout ça&nbsp;?</summary><p class="a">C'est un outil parmi d'autres, utile pour les devis, les réponses aux clients ou l'administratif. On définit ensemble ce qui peut lui être confié, et ce qui ne doit jamais l'être.</p></details>
+<details><summary>Je ne suis pas à l'aise avec le numérique.</summary><p class="a">C'est le cas le plus fréquent. Je vous explique sans jargon, et chaque outil est livré avec une prise en main.</p></details>
 <details><summary>Je peux arrêter un abonnement&nbsp;?</summary><p class="a">Oui. Après la période minimale, avec un mois de préavis. Vous récupérez tous vos accès et fichiers, sans frais.</p></details>
-</div>
 </div>
 </section>
 
-<section class="dark" id="commencer">
+<section class="dark" id="visite">
 <div class="wrap section cta">
-<h2 class="h2" style="margin: 0">Par où commencer&nbsp;? Cinq minutes de questions, puis vingt minutes au téléphone.</h2>
+<h2 class="h2" style="margin: 0">Deux minutes de questions, puis 45 minutes chez vous.</h2>
 <div style="display: flex; flex-direction: column; gap: 18px; align-items: flex-start">
 <p style="color: #D9D2C4">Gratuit et sans engagement. Si vous n'avez besoin de rien, je vous le dirai.</p>
-<a href="#prediagnostic" data-diag class="btn btn-light">Faire le pré-diagnostic gratuit</a>
+<a href="#visite" data-diag class="btn btn-light">Demander une visite gratuite</a>
 </div>
 </div>
 </section>
@@ -355,22 +290,20 @@ body.lock{overflow:hidden}
 <a href="#top" class="logo">Robin Borreil</a>
 <p class="muted">Partenaire numérique des petites entreprises. Basé au Pays basque, intervention dans toute la France.</p>
 </div>
-<div><h3>Solutions</h3><ul><li><a href="#methode">Diagnostic</a></li><li><a href="#solutions">Web et visibilité</a></li><li><a href="#exemples">IA et automatisation</a></li><li><a href="#tarifs">Accompagnement</a></li><li><a href="#tarifs">Tarifs</a></li></ul></div>
-<div><h3>Pour qui</h3><ul><li><a href="#exemples">Artisans</a></li><li><a href="#exemples">Restaurants et hébergements</a></li><li><a href="#exemples">Indépendants et cabinets</a></li></ul></div>
-<div><h3>Contact</h3><ul><li><a href="tel:+33777890103">07 77 89 01 03</a></li><li><a href="mailto:contact@robinborreil.fr">contact@robinborreil.fr</a></li><li><a href="#prediagnostic" data-diag>Prendre rendez-vous</a></li></ul></div>
+<div><h3>Offres</h3><ul><li><a href="#offres">Être trouvé sur Google</a></li><li><a href="#offres">Site internet</a></li><li><a href="#offres">Gagner du temps</a></li><li><a href="#offres">Entretien et accompagnement</a></li></ul></div>
+<div><h3>Pour qui</h3><ul><li><a href="#" data-soon="Page Artisans : arrive avec le site.">Artisans</a></li><li><a href="#" data-soon="Page Restaurants et hébergements : arrive avec le site.">Restaurants et hébergements</a></li><li><a href="#" data-soon="Les guides pratiques seront publiés avec le site.">Ressources</a></li></ul></div>
+<div><h3>Contact</h3><ul><li><a href="tel:+33777890103">07 77 89 01 03</a></li><li><a href="mailto:contact@robinborreil.fr">contact@robinborreil.fr</a></li><li><a href="#visite" data-diag>Demander une visite</a></li></ul></div>
 </div>
 <div class="legal">
 <span>© 2026 Robin Borreil · Prix HT, TVA non applicable, art. 293 B du CGI</span>
 <span style="display: flex; flex-wrap: wrap; gap: 20px"><a href="#" data-soon="Rédigées dès réception du statut juridique et du SIRET.">Mentions légales</a><a href="#" data-soon="Rédigée dès réception du statut juridique et du SIRET.">Confidentialité</a><a href="#" data-soon="Rédigées à partir des conditions des abonnements, après relecture juridique.">CGV</a></span>
 </div>
 </footer>
-
 </div>
-
 <div class="ov" id="ov" hidden>
 <div class="dlg" role="dialog" aria-modal="true" aria-labelledby="dlg-t">
-<button type="button" class="x" id="dlg-x" aria-label="Fermer le questionnaire">×</button>
-<p class="eyebrow">Pré-diagnostic gratuit</p>
+<button type="button" class="x" id="dlg-x" aria-label="Fermer">×</button>
+<p class="eyebrow">Demande de visite gratuite</p>
 <div class="bar" aria-hidden="true"><i id="bar"></i></div>
 <p class="step-n" id="stepn" aria-live="polite"></p>
 <div id="dlg-body"></div>
@@ -391,14 +324,11 @@ const say=m=>{toast.textContent=m;toast.hidden=false;clearTimeout(tt);tt=setTime
 document.addEventListener('click',e=>{const a=e.target.closest('a[data-soon]');if(!a)return;if(a.getAttribute('href')==='#')e.preventDefault();say(a.dataset.soon);});
 
 const Q=[
-{k:'secteur',t:'Quelle est votre activité ?',o:['Artisan, bâtiment','Restaurant, hébergement, conciergerie','Indépendant, cabinet, conseil, formation','Commerce','Autre structure (association, PME…)']},
-{k:'taille',t:'Combien êtes-vous dans l\'entreprise ?',o:['Seul(e)','2 à 5','6 à 20','Plus de 20']},
-{k:'site',t:'Votre site internet aujourd\'hui :',o:['Je n\'en ai pas','Il existe, mais il ne m\'apporte rien','Il fonctionne correctement','Je ne sais pas trop']},
+{k:'secteur',t:'Quelle est votre activité ?',o:['Artisan, bâtiment','Restaurant, hébergement, conciergerie','Commerce','Indépendant, cabinet, conseil','Autre (PME, association…)']},
+{k:'site',t:'Votre site internet aujourd\'hui :',o:['Je n\'en ai pas','Il existe, mais il ne m\'apporte rien','Il fonctionne correctement']},
 {k:'google',t:'Votre fiche Google (horaires, avis, photos) :',o:['Je n\'en ai pas, ou je ne l\'ai jamais regardée','Elle existe, mais elle est peu remplie','Elle est à jour, avec des avis']},
-{k:'temps',t:'Qu\'est-ce qui vous prend le plus de temps ?',o:['Les devis et les relances','Répondre aux mêmes questions','L\'administratif et les documents','Trouver de nouveaux clients','Rien de particulier']},
-{k:'ia',t:'Et l\'intelligence artificielle ?',o:['Je ne l\'utilise pas','Un peu, sans vraie méthode','Régulièrement']},
-{k:'prio',t:'Votre priorité pour les six prochains mois :',o:['Recevoir plus de demandes','Gagner du temps','Mettre de l\'ordre dans mes outils','Former mon équipe']},
-{k:'budget',t:'Le budget que vous envisagez :',o:['Moins de 500 €','500 à 1 500 €','1 500 à 3 500 €','Plus de 3 500 €','Je ne sais pas encore']}
+{k:'temps',t:'Qu\'est-ce qui vous prend le plus de temps ?',o:['Les devis et les relances','Répondre aux mêmes questions','L\'administratif et les documents','Rien de particulier']},
+{k:'lieu',t:'Pour la visite, vous préférez :',o:['Sur place, au Pays basque','En visio','Un appel d\'abord']}
 ];
 const A={};let i=0,lastFocus=null;
 const ov=$('#ov'),body=$('#dlg-body'),bar=$('#bar'),stepn=$('#stepn');
@@ -418,13 +348,13 @@ function render(){
     (body.querySelector('input:checked')||body.querySelector('input')).focus();
   }else if(i===Q.length){
     stepn.textContent='Dernière étape';
-    body.innerHTML='<h2 id="dlg-t">Où puis-je vous rappeler ?</h2><form id="f" novalidate>'+
+    body.innerHTML='<h2 id="dlg-t">Où puis-je vous joindre ?</h2><form id="f" novalidate>'+
       '<div class="fld"><label for="f-n">Prénom et nom</label><input id="f-n" autocomplete="name" required><span class="err" id="e-n"></span></div>'+
       '<div class="fld"><label for="f-e">Email</label><input id="f-e" type="email" autocomplete="email" required><span class="err" id="e-e"></span></div>'+
       '<div class="fld"><label for="f-t">Téléphone (facultatif)</label><input id="f-t" type="tel" autocomplete="tel"><span class="err" id="e-t"></span></div>'+
       '<div class="fld"><label for="f-c">Entreprise et commune</label><input id="f-c" autocomplete="organization"><span class="err"></span></div>'+
       '<label class="chk"><input type="checkbox" id="f-ok"><span>J\'accepte que ces informations servent uniquement à répondre à ma demande.</span></label><p class="err" id="e-ok"></p>'+
-      '<div class="nav2"><button type="button" class="btn btn-ghost" id="prev">Retour</button><button type="submit" class="btn">Voir le résultat</button></div></form>';
+      '<div class="nav2"><button type="button" class="btn btn-ghost" id="prev">Retour</button><button type="submit" class="btn">Envoyer ma demande</button></div></form>';
     $('#prev').addEventListener('click',()=>{i--;render();});
     $('#f').addEventListener('submit',e=>{
       e.preventDefault();let ok=true;
@@ -440,9 +370,9 @@ function render(){
   }else{
     stepn.textContent='Votre orientation';
     const R=reco();
-    body.innerHTML='<h2 id="dlg-t" tabindex="-1">Merci '+esc(A.nom.split(' ')[0])+'. Voici par où je commencerais.</h2>'+
+    body.innerHTML='<h2 id="dlg-t" tabindex="-1">Merci '+esc(A.nom.split(' ')[0])+'. Voici ce que je regarderai en priorité.</h2>'+
       R.map(r=>'<div class="reco"><h3>'+r[0]+'</h3><p>'+r[1]+'</p><p class="pr">'+r[2]+'</p></div>').join('')+
-      '<div class="warn"><strong>Aperçu de maquette :</strong> rien n\'a été envoyé. Sur le vrai site, vos réponses me parviennent et je vous propose un créneau de 20 minutes.</div>'+
+      '<div class="warn"><strong>Aperçu de maquette :</strong> rien n\'a été envoyé. Sur le vrai site, je reçois votre demande et je vous rappelle sous 48 h ouvrées pour fixer la visite.</div>'+
       '<div class="nav2"><button type="button" class="btn btn-ghost" id="restart">Recommencer</button><button type="button" class="btn" id="close2">Fermer</button></div>';
     $('#restart').addEventListener('click',()=>{for(const k in A)delete A[k];i=0;render();});
     $('#close2').addEventListener('click',closeD);
@@ -451,13 +381,10 @@ function render(){
 }
 function reco(){
   const r=[];const sec=A.secteur;
-  const webWeak=A.site===0||A.site===1, gWeak=A.google!==2;
-  const timeSink=[0,1,2].includes(A.temps), iaLow=A.ia!==2;
-  if(gWeak)r.push(['Être trouvé près de chez vous','Votre fiche Google est le premier levier, avant même le site. '+(sec===1?'Pour un restaurant ou un hébergement, horaires justes et réponses aux avis changent beaucoup de choses.':'Photos, services, avis : c\'est souvent là que le client vous choisit.'),'Pack visibilité locale · dès 390 € HT']);
-  if(webWeak)r.push([A.site===0?'Un site simple qui inspire confiance':'Refaire travailler votre site',sec===0?'Centré sur vos réalisations et une demande de devis complète (travaux, commune, photos).':'Court, rapide, avec un seul objectif : vous amener des demandes.','Site vitrine · dès 1 290 € HT']);
-  if(timeSink)r.push([A.temps===0?'Accélérer devis et relances':A.temps===1?'Ne plus répondre dix fois aux mêmes questions':'Alléger l\'administratif',iaLow?'Un assistant IA configuré pour votre métier, avec des règles claires sur vos données, et une ou deux automatisations simples.':'Structurer ce que vous faites déjà avec l\'IA, et automatiser les étapes répétitives.','Assistant IA · dès 490 € HT · automatisation simple · dès 390 € HT']);
-  if(A.prio===3||A.taille>=2)r.push(['Former l\'équipe','Un atelier pratique sur l\'IA au travail et la protection des données, adapté à votre activité.','Demi-journée en entreprise · 690 € HT']);
-  if(r.length===0||r.length>=3||A.prio===2||A.budget===4)r.unshift(['Commencer par le diagnostic','Plusieurs pistes se dessinent : un diagnostic permet de les classer et de ne financer que ce qui compte. Il est déduit si vous signez sous 60 jours.','Diagnostic numérique · 290 € HT']);
+  if(A.google!==2)r.push(['Être trouvé sur Google',sec===1?'Pour un restaurant ou un hébergement : horaires de saison justes, photos, réponses aux avis. C\'est souvent le levier le plus rapide.':'Catégories, photos, services et avis : c\'est souvent là que le client vous choisit, avant même votre site.','390 € HT']);
+  if(A.site!==2)r.push([A.site===0?'Un site simple qui inspire confiance':'Faire travailler votre site',sec===0?'Centré sur vos réalisations, avec une demande de devis complète : travaux, commune, photos.':'Court, rapide sur mobile, avec un seul objectif : vous amener des demandes.','dès 1 290 € HT']);
+  if(A.temps!==3)r.push(['Gagner du temps',A.temps===0?'Demandes de devis structurées, modèles prêts, relance automatique à J+7.':A.temps===1?'Une base de réponses prêtes, en plusieurs langues si besoin, et des réponses aux avis préparées.':'Un assistant configuré sur vos modèles, sans données clients, et une automatisation simple.','590 € HT']);
+  if(r.length===0)r.push(['Un œil extérieur','Tout semble en place : la visite servira à repérer les petits réglages qui comptent, ou à vous confirmer que tout va bien.','Visite gratuite']);
   return r.slice(0,3);
 }
 function openD(e){if(e)e.preventDefault();lastFocus=document.activeElement;setMenu(false);ov.hidden=false;document.body.classList.add('lock');if(i>Q.length)i=0;render();}
